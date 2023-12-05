@@ -4,7 +4,6 @@ def parse_seeds(line):
 
 def parse_map(fd):
     line = fd.readline()
-    print(line)
     line = fd.readline()
     _map = []
     while(line != "\n"): 
@@ -40,9 +39,9 @@ def calculate_seed_to_location(seed, maps):
 def find_lowest_location_number(seeds, maps):
     location_numbers = []
     for s in seeds:
+        print(s)
         location_numbers.append(calculate_seed_to_location(s, maps))
     return min(location_numbers)
 
-seeds, maps = parse_input("input.txt")
-location = find_lowest_location_number(seeds, maps)
-print(location)
+#seeds, maps = parse_input("input.txt")
+#location = find_lowest_location_number(seeds, maps)
